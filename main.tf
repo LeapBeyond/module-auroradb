@@ -17,7 +17,7 @@ resource random_password root {
 # security group for the cluster members
 # -----------------------------------------------------------
 resource aws_security_group mysql_access {
-  name        = "mysql_access"
+  name        = "${var.basename}-mysql_access"
   description = "allows mysql access"
   vpc_id      = var.vpc_id
 
