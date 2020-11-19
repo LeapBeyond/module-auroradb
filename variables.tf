@@ -28,8 +28,8 @@ variable tags {
 }
 
 variable basename {
-  type       = string
-  decription = "prefix used for various names - required"
+  type        = string
+  description = "prefix used for various names - required"
 }
 
 variable db_name {
