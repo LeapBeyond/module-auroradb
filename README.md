@@ -11,7 +11,7 @@ This module does make use of Terraform version constraints (see `versions.tf`) b
 This is intended to be very simple to use, for example:
 
 ```
-module test_vpc {
+module test_db {
   source       = "github.com/LeapBeyond/module-auroradb"
 
   vpc_id       = "vpc-c363feab"
