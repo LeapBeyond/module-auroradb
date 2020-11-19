@@ -9,10 +9,10 @@ output db_password {
 
 output db_writer_jdbc {
   description = "writer JDBC url"
-  value       = format("jdbc:mysql:aurora://%s:%d/%s", aws_rds_cluster.lab.endpoint, aws_rds_cluster.lab.port, var.db_name)
+  value       = format("jdbc:mysql:aurora://%s:%d/%s", aws_rds_cluster.dbcluster.endpoint, aws_rds_cluster.dbcluster.port, var.db_name)
 }
 
 output db_reader_jdbc {
   description = "reader JDBC url"
-  value       = format("jdbc:mysql:aurora://%s:%d/%s", aws_rds_cluster.lab.reader_endpoint, aws_rds_cluster.lab.port, var.db_name)
+  value       = format("jdbc:mysql:aurora://%s:%d/%s", aws_rds_cluster.dbcluster.reader_endpoint, aws_rds_cluster.dbcluster.port, var.db_name)
 }
