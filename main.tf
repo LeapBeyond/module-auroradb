@@ -42,7 +42,7 @@ resource aws_security_group mysql_access {
 # cluster definition
 # -----------------------------------------------------------
 resource aws_db_subnet_group dbcluster {
-  name       = var.vpc_name
+  name       = var.basename
   subnet_ids = var.subnet_id
   tags       = merge({ "Name" = "${var.basename}-dbcluster" }, var.tags)
 }
