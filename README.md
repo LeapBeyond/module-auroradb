@@ -12,15 +12,16 @@ This is intended to be very simple to use, for example:
 
 ```
 module test_db {
-  source       = "github.com/LeapBeyond/module-auroradb"
+  source        = "github.com/LeapBeyond/module-auroradb"
 
-  vpc_id       = "vpc-c363feab"
-  subnet_id    = ["subnet-6082e509", "subnet-19b04155"]
-  access_ip    = ["89.36.68.26/32", "35.176.208.98/32", "3.9.34.0/24"]
-  tags         = { Owner = "Leap Beyond", Client = "Internal", Project = "AuroraDB Module Test" }
-  basename     = "mytest"
-  db_name      = "mydbase"
-  cluster_size = 4
+  vpc_id        = "vpc-c363feab"
+  subnet_id     = ["subnet-6082e509", "subnet-19b04155"]
+  access_ip     = ["89.36.68.26/32", "35.176.208.98/32", "3.9.34.0/24"]
+  tags          = { Owner = "Leap Beyond", Client = "Internal", Project = "AuroraDB Module Test" }
+  basename      = "mytest"
+  db_name       = "mydbase"
+  instance_size = "db.t3.small"
+  cluster_size  = 4
 }
 ```
 
@@ -33,6 +34,7 @@ module test_db {
 | basename | a string used as the prefix on various names - this should be unique |
 | db_name | the name of the database that is first created |
 | cluster_size | this defaults to 2, but can be overridden. Be aware that the configured instances are very generously provisioned |
+| instance_size | the size of the cluster member instances |
 
 The following outputs are provided:
 

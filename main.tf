@@ -90,7 +90,7 @@ resource aws_rds_cluster_instance dbcluster_instance {
   cluster_identifier           = aws_rds_cluster.dbcluster.cluster_identifier
   engine                       = "aurora"
   engine_version               = "5.6.10a"
-  instance_class               = "db.r5.large"
+  instance_class               = var.instance_size
   publicly_accessible          = true
   db_subnet_group_name         = aws_db_subnet_group.dbcluster.name
   db_parameter_group_name      = "default.aurora5.6"
