@@ -27,6 +27,12 @@ variable tags {
   }
 }
 
+variable instance_size {
+  type = string
+  description = "size of instance to use for cluster members"
+  default = "db.r5.large"
+}
+
 variable basename {
   type        = string
   description = "prefix used for various names - required"
